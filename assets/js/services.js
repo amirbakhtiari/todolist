@@ -18,6 +18,6 @@ todoApp.factory('DB', function() {
 
     };
     removeAll = function() {
-
+        
     };
 });
