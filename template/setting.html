@@ -1,0 +1,26 @@
+<md-dialog aria-label="وظیفه جدید">
+  <form>
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <h2>تنظیمات</h2>
+        <span flex></span>
+        <md-button class="md-icon-button" ng-click="cancel()">
+          <span class="fa fa-window-close"></span>
+        </md-button>
+      </div>
+    </md-toolbar>
+    <md-dialog-content style="max-width:800px;max-height:810px; width: 450px;">
+        <md-content layout-padding>
+    <md-subheader class="md-no-sticky">تنظیمات اصلی</md-subheader>
+        <md-checkbox ng-model="data.cb1" aria-label="Checkbox 1">
+            بتوان تاریخ شروع و پایان را یکسان وارد کرد.
+          </md-checkbox>
+        </md-content>
+    </md-dialog-content>
+
+    <md-dialog-actions layout="row">
+      <span flex></span>
+       <md-button class="md-raised md-primary">تایید</md-button>
+    </md-dialog-actions>
+  </form>
+</md-dialog>

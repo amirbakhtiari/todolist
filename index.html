@@ -1,0 +1,36 @@
+<!doctype html>
+<html ng-app="todoApp" lang="fa" dir="rtl">
+<head>
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="./bower_components/angular-material/angular-material.css">
+        <link rel="stylesheet" href="./css/styles.css">        
+    <title>
+        {{title}}
+    </title>
+</head>
+
+<body>
+
+<div ng-controller="mainCtrl" ng-cloak>
+  <md-toolbar>
+      <div class="">
+        <md-button class="md-fab md-mini" aria-label="Add task" ng-click="addTask($event)">
+          <span class="fa fa-plus"></span>
+        </md-button>
+        <md-button class="md-fab md-mini" aria-label="Add task" ng-click="group($event)">
+          <span class="fa fa-object-group"></span>
+        </md-button>
+        <md-button class="md-fab md-mini" aria-label="list group" ng-click="groupList($event)">
+          <span class="fa fa-list"></span>
+        </md-button>
+        <!--<md-button class="md-fab md-mini" aria-label="Setting" ng-click="setting($event)">
+          <span class="fa fa-wrench"></span>
+        </md-button>-->
+      </div>
+    </md-toolbar>
+</div>
+
+    <script src="/js/scripts.js"></script>
+    <script src="/js/pouchdb.min.js"></script>    
+</body>
+</html>
