@@ -1,5 +1,4 @@
-<md-dialog aria-label="وظیفه جدید">
-  <form>
+<md-dialog aria-label="وظیفه جدید" aria-label="وظیفه جدید">
     <md-toolbar>
       <div class="md-toolbar-tools">
         <h2>افزودن وظیفه جدید</h2>
@@ -9,6 +8,7 @@
         </md-button>
       </div>
     </md-toolbar>
+
     <md-dialog-content style="max-width:800px;max-height:810px; width: 450px;">
       <md-content layout-padding>
     <div>
@@ -16,7 +16,7 @@
         <div layout-gt-sm="row">
           <md-input-container class="md-block" flex-gt-sm>
             <label>عنوان</label>
-            <input ng-model="user.firstName">
+            <input ng-model="task.title">
           </md-input-container>
         </div>
         <div layout-gt-xs="row">
@@ -53,10 +53,8 @@
 
         <md-input-container class="md-block">
           <label>توضیحات</label>
-          <textarea ng-model="user.biography" md-maxlength="150" rows="5" md-select-on-focus></textarea>
+          <textarea ng-model="task.description" md-maxlength="150" rows="5" md-select-on-focus></textarea>
         </md-input-container>
-
-      </form>
     </div>
   </md-content>
     </md-dialog-content>
@@ -66,7 +64,7 @@
         {{task.status ? "فعال" : "غیرفعال"}}
       </md-switch>
       <span flex></span>
-       <md-button class="md-raised md-primary">تایید</md-button>
+       <md-button ng-click="addTask()" class="md-raised md-primary">تایید</md-button>
     </md-dialog-actions>
   </form>
 </md-dialog>

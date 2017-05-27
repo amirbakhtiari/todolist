@@ -1,4 +1,4 @@
-var todoApp = angular.module('todoApp', ['ngMaterial', 'ngStorage'])
-.run(function($rootScope) {
-    $rootScope.title = "مدیریت وظایف"
-});
+angular.module('todoApp', ['todo.controllers', 'todo.services'])
+	.run(function($rootScope) {
+    	$rootScope.title = "مدیریت وظایف"
+	});

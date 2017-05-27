@@ -1,5 +1,5 @@
-todoApp.controller('mainCtrl', function($scope, $mdDialog) {
-    
+angular.module('todo.controllers', ['ngMaterial'])
+    .controller('MainController', function($scope, $mdDialog) {
     /**
      * show groups of list
      */
@@ -20,7 +20,7 @@ todoApp.controller('mainCtrl', function($scope, $mdDialog) {
             $mdDialog.cancel();
         }
     }
-    /********************************************************************************************/
+   
     $scope.addTask = function(ev) {
         $mdDialog.show({
             controller: addTaskCtrl,
@@ -63,12 +63,15 @@ todoApp.controller('mainCtrl', function($scope, $mdDialog) {
         $scope.cancel = function() {
             $mdDialog.cancel();
         };
+        $scope.addTask = function() {
+            console.log($scope.task);
+        }
         /**
          * return all groups
          */
-        db.allDocs({include_docs: true, descending: true}, function(err, doc) {
+        /*db.allDocs({include_docs: true, descending: true}, function(err, doc) {
             $scope.groups = doc.rows;
-        });
+        });*/
         /**
          * set priority
          */
@@ -89,7 +92,7 @@ todoApp.controller('mainCtrl', function($scope, $mdDialog) {
      * group controller
      * @param {*} scope 
      */
-    function groupCtrl($scope, $localStorage, $sessionStorage) {
+    function groupCtrl($scope) {
         $scope.cancel = function() {
             $mdDialog.cancel();
         };
